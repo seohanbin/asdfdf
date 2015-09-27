@@ -142,13 +142,17 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="continue.c" />
     <ClCompile Include="game.c" />
+    <ClCompile Include="gamemoney.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="winning.c" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common.h" />
+    <ClInclude Include="continue.h" />
     <ClInclude Include="game.h" />
+    <ClInclude Include="gamemoney.h" />
     <ClInclude Include="winning.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

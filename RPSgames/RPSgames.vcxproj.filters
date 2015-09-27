@@ -24,6 +24,12 @@
     <ClCompile Include="winning.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="gamemoney.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="continue.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="common.h">
@@ -33,6 +39,12 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="winning.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="gamemoney.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="continue.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

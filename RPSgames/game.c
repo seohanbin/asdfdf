@@ -8,6 +8,7 @@
 #include "common.h"
 #include "game.h"
 #include "winning.h"
+#include "gamemoney.h"
 
 /* 함    수: int ChoiceOfCom(void).
 * 기    능: 무작위 값을 반환.
@@ -46,14 +47,23 @@ void WhoIsWinner(int com, int you)
 {
 	plusgametime();
 	if (com == you)
+	{
 		puts(".........비김.........");
+	}
+
 	else if ((com + 1) % 3 == you)
 	{
+		UserWin();
 		pluswintime();
 		puts(".........사용자 승리.........");
+
 	}
 	else
+	{
+		UserLose();
 		puts(".........사용자 패배.........");
+	}
+		
 }
 
 void ShowRSP(int inp)

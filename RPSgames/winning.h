@@ -5,4 +5,10 @@ void Showwinningrate();
 void pluswintime();
 void plusgametime();
 
+
+
+extern int gametimes;
+extern int wintimes;
+
+
 #endif

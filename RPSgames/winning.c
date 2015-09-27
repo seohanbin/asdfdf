@@ -1,8 +1,8 @@
 #include "common.h"
 
 
-static int gametimes=0;
-static int wintimes=0;
+int gametimes;
+int wintimes;
 
 void plusgametime()
 {
@@ -20,5 +20,5 @@ void Showwinningrate()
 		puts("±â·Ï¾øÀ½");
 		return;
 	}
-	printf("½Â·ü: %f %", (double)wintimes*100 / gametimes);
+	printf("½Â·ü: %f %%", (double)wintimes*100 / gametimes);
 }
