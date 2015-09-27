@@ -12,24 +12,25 @@ int main(void)
 {
 	int com;
 	int you;
-	puts("자! 게임을 시작합니다.");
-	puts("");
 
-	puts("☆☆☆☆☆☆ 대결! ☆☆☆☆☆☆!!");
-	com = ChoiceOfCom();
-	you = ChoiceOfMe();
-	puts("");
+	while (1)
+	{
+		puts("자! 게임을 시작합니다.");
+		puts("");
 
-	puts("★★★★★★ 결과! ★★★★★★!!");
-	WhoIsWinner(com, you);
+		puts("☆☆☆☆☆☆ 대결! ☆☆☆☆☆☆!!");
+		com = ChoiceOfCom();
+		you = ChoiceOfMe();
+		puts("");
 
-	printf("▷ 컴퓨터의 선택은 %d \n", com);
+		puts("★★★★★★ 결과! ★★★★★★!!");
+		WhoIsWinner(com, you);
 
-	if (you == EVEN)
-		puts("▷ 당신의 선택은 짝수. ");
-	else
-		puts("▷ 당신의 선택은 홀수. ");
 
-	puts("");
+		printf("▷ 컴퓨터의 선택은 "); ShowRSP(com);
+		printf("▷ 당신의 선택은 "); ShowRSP(you);
+
+		puts("");
+	}
 	return 0;
 }

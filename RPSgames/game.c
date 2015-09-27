@@ -17,7 +17,7 @@ int ChoiceOfCom(void)
 {
 
 	srand(time(NULL)); //srand((unsigned int)time(NULL));
-	return rand() % 100;
+	return rand() % 3;
 
 }
 
@@ -29,11 +29,11 @@ int ChoiceOfCom(void)
 int ChoiceOfMe(void)
 {
 	int input;
-	printf("숫자선택( 홀1 짝2 ) : ");
+	printf("숫자선택( 1가위 2바위 3보 ) : ");
 	scanf("%d", &input);
 	while (getchar() != '\n');
 
-	return input;
+	return input-1;
 }
 
 /* 함    수: void WhoIsWinner(int com, int you)
@@ -43,14 +43,22 @@ int ChoiceOfMe(void)
 */
 void WhoIsWinner(int com, int you)
 {
-	if (com%2 == you)
-	{
-		puts("당신이 승자");
-	}
+	if (com == you)
+		puts(".........비김.........");
+	else if ((com + 1) % 3 == you)
+		puts(".........사용자 승리.........");
 	else
-	{
-		puts("컴퓨터가 승자");
-	}
+		puts(".........사용자 패배.........");
+}
+
+void ShowRSP(int inp)
+{
+	if (inp == SIS)
+		puts("▷ 가위");
+	else if (inp == ROC)
+		puts("▷ 바위");
+	else
+		puts("▷ 보");
 }
 
 /* end of file */
