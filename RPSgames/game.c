@@ -7,6 +7,7 @@
 #include <time.h>
 #include "common.h"
 #include "game.h"
+#include "winning.h"
 
 /* 함    수: int ChoiceOfCom(void).
 * 기    능: 무작위 값을 반환.
@@ -29,7 +30,7 @@ int ChoiceOfCom(void)
 int ChoiceOfMe(void)
 {
 	int input;
-	printf("숫자선택( 1가위 2바위 3보 ) : ");
+	printf("숫자선택( 1가위 2바위 3보 4끝내기) : ");
 	scanf("%d", &input);
 	while (getchar() != '\n');
 
@@ -43,10 +44,14 @@ int ChoiceOfMe(void)
 */
 void WhoIsWinner(int com, int you)
 {
+	plusgametime();
 	if (com == you)
 		puts(".........비김.........");
 	else if ((com + 1) % 3 == you)
+	{
+		pluswintime();
 		puts(".........사용자 승리.........");
+	}
 	else
 		puts(".........사용자 패배.........");
 }

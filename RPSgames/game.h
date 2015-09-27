@@ -8,7 +8,7 @@
 #ifndef __GAME_H__
 #define __GAME_H__
 
-enum { SIS = 0, ROC, PAP };
+enum { SIS = 0, ROC, PAP, QUIT };
 
 int ChoiceOfCom(void);
 int ChoiceOfMe(void);

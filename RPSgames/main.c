@@ -7,6 +7,7 @@
 
 #include "common.h"
 #include "game.h"
+#include "winning.h"
 
 int main(void)
 {
@@ -23,13 +24,19 @@ int main(void)
 		you = ChoiceOfMe();
 		puts("");
 
+		if (you==QUIT)
+		{
+			printf("최종"); Showwinningrate();
+			return 0;
+		}
+
 		puts("★★★★★★ 결과! ★★★★★★!!");
 		WhoIsWinner(com, you);
 
 
 		printf("▷ 컴퓨터의 선택은 "); ShowRSP(com);
 		printf("▷ 당신의 선택은 "); ShowRSP(you);
-
+		Showwinningrate();
 		puts("");
 	}
 	return 0;
